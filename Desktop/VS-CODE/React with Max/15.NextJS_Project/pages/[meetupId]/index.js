@@ -32,7 +32,7 @@ export const getStaticPaths = async () => {
     // tedka muzeme generovat paths dynamically 
     return {
         // fallback will tell next js if our paths contain all possible parameters values  (all meetups) or just some of them 
-        fallback: false,
+        fallback: true,
         // kdyz rekneme ze fallback je false tak rikame ze pouze ty paths, ktere tady mame vypsane s epredvygeneruji, coz znamena ze pokud by user zadal do url treba id ktere tu vypsane nemame, tak by se mu hodila error page.
         // pokud alre reknes ze fallback je true tak si v podstate jenom vypsala nejake possible paths, treba ty ktere jsou nejpouzivanejsi, tak ty se predvygeneruji, a kdyby user klikl na neco co tu nemame, tak by se to vygenerovalo 'za chodu' tedy az pote co na to klikl
 
